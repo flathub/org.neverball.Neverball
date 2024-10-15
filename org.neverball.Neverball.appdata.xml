@@ -25,6 +25,12 @@
     </p>
   </description>
   <url type="homepage">https://neverball.org/</url>
+  <url type="vcs-browser">https://github.com/Neverball/neverball</url>
+  <url type="bugtracker">https://github.com/Neverball/neverball/issues</url>
+  <categories>
+    <category>ArcadeGame</category>
+    <category>Game</category>
+  </categories>
   <screenshots>
     <screenshot type="default">
       <image>https://neverball.org/images/shots/01-neverball-easy/easy-07-01.jpg</image>
@@ -36,7 +42,6 @@
       <image>https://neverball.org/images/shots/04-neverball-mym1/mym1-13-04.jpg</image>
     </screenshot>
   </screenshots>
-  <url type="bugtracker">https://github.com/Neverball/neverball</url>
   <content_rating type="oars-1.1" />
   <releases>
     <release version="1.6.0" date="2014-05-21"/>
