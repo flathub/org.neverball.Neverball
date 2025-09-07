@@ -1,6 +1,6 @@
 app-id: org.neverball.Neverball
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: neverball
 finish-args:
@@ -12,7 +12,9 @@ finish-args:
   - --persist=.neverball
 modules:
   - name: physfs
-    buildsystem: cmake
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     cleanup:
       - /bin
       - /include
@@ -21,6 +23,7 @@ modules:
       - type: archive
         url: http://icculus.org/physfs/downloads/physfs-3.0.2.tar.bz2
         sha256: 304df76206d633df5360e738b138c94e82ccf086e50ba84f456d3f8432f9f863
+
   - name: neverball
     buildsystem: simple
     build-options:
@@ -34,7 +37,7 @@ modules:
           - makefile.patch
           - version.patch
       - type: file
-        path: org.neverball.Neverball.appdata.xml
+        path: org.neverball.Neverball.metainfo.xml
     build-commands:
       - make -j$FLATPAK_BUILDER_N_JOBS DATADIR=/app/share/neverball LOCALEDIR=/app/share/locale
       - install -Dm644 dist/neverball_512.png /app/share/icons/hicolor/512x512/apps/org.neverball.Neverball.png
@@ -43,7 +46,7 @@ modules:
       - install -Dm644 dist/neverputt.desktop /app/share/applications/org.neverball.Neverball.Neverputt.desktop
       - sed -i '/^Icon/c\Icon=org.neverball.Neverball' /app/share/applications/org.neverball.Neverball.desktop
       - sed -i '/^Icon/c\Icon=org.neverball.Neverball.Neverputt' /app/share/applications/org.neverball.Neverball.Neverputt.desktop
-      - install -Dm644 org.neverball.Neverball.appdata.xml /app/share/appdata/org.neverball.Neverball.appdata.xml
+      - install -Dm644 org.neverball.Neverball.metainfo.xml /app/share/metainfo/org.neverball.Neverball.metainfo.xml
       - mkdir -p /app/share/locale
       - cp -r locale/* /app/share/locale/
       - mkdir -p /app/share/neverball
