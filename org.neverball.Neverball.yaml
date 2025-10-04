@@ -11,6 +11,9 @@ finish-args:
   - --socket=pulseaudio
   - --persist=.neverball
 modules:
+  - shared-modules/SDL/sdl12-compat.json
+  - shared-modules/SDL/SDL_ttf-2.0.11.json
+
   - name: physfs
     buildsystem: cmake-ninja
     config-opts:
