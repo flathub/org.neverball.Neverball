@@ -45,4 +45,5 @@ modules:
       - cp -r locale/* /app/share/locale/
       - mkdir -p /app/share/neverball
       - cp -r data/* /app/share/neverball/
+      - mkdir -p /app/bin
       - install -Dm755 mapc neverball neverputt /app/bin/
