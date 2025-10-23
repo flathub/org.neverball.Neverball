@@ -20,8 +20,8 @@ modules:
     build-options:
       ldflags: -z muldefs
       env:
-        C_INCLUDE_PATH: /app/include/SDL2
-        CPLUS_INCLUDE_PATH: /app/include/SDL2
+        C_INCLUDE_PATH: /app/include/SDL2:/app/include
+        CPLUS_INCLUDE_PATH: /app/include/SDL2:/app/include
     sources:
       - type: archive
         url: https://github.com/Neverball/neverball/archive/neverball-1.6.0.tar.gz
