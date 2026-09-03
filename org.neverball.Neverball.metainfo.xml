@@ -10,6 +10,7 @@
   <name>Neverball</name>
   <developer_name>Robert Kooima and others</developer_name>
   <summary>Deftly Guide a Rolling Ball through Many Slick 3D Levels</summary>
+  <summary xml:lang="fr">Guidez habilement une boule à travers de nombreux niveaux 3D</summary>
   <description>
     <p>
       Guide a rolling ball through dangerous territory that you control by
@@ -22,6 +23,20 @@
     <p>
       Bundled with Neverball is also Neverputt, a hot-seat local multiplayer
       miniature golf game, built on the physics and graphics engine of Neverball.
+    </p>
+    <p xml:lang="fr">
+      Guidez une boule à travers des environnements dangereux en inclinant le
+      sol. Gardez l’équilibre sur des ponts étroits, parcourez des labyrinthes,
+      empruntez des plateformes mobiles et évitez les obstacles qui vous
+      poussent ou vous bousculent afin d’atteindre l’arrivée. Faites la course
+      contre la montre et ramassez des pièces pour gagner des boules
+      supplémentaires. Avec sa physique soignée et ses graphismes 3D épurés et
+      attrayants, Neverball est assurément un jeu à essayer.
+    </p>
+    <p xml:lang="fr">
+      Neverputt, un jeu de mini-golf multijoueur en local, est également inclus
+      avec Neverball. Il est basé sur le moteur physique et graphique de
+      Neverball.
     </p>
   </description>
   <url type="homepage">https://neverball.org/</url>
@@ -43,6 +58,12 @@
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>gamepad</control>
+    <internet>offline-only</internet>
+  </supports>
   <releases>
     <release version="1.6.0" date="2014-05-21"/>
   </releases>
